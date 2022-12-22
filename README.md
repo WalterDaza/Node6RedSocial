@@ -1,17 +1,23 @@
-Punto de partida
+# Red Social API
 
-Cuando queremos recuperar una contraseña hago una peticion que me pide el email
+### url base: http://localhost:9000/api/v1
 
-/api/v1/auth/recovery-password
-- post crear un nuevo recovery password
-    - Llegar el correo electronico 
-    - Link que te permite hacer una peticion para actualizar tus datos
+-/auth
+    -/login -> login con las credenciales de usuario para autenticar
+-/posts
+    -/me -> mis propias publicaciones
+    -/users/:id -> publicaciones de usuarios en particular
+    -/:id -> una publicacion en especifico
+    -/:id/comments -> los comentarios de una publicacion en especifico
+    -/:id/likes -> los likes de una publciacion en especifico
 
-/api/v1/auth/recovery-password/:id
-- patch actualizar la contraseña validando el enlace del recovery password
-    - cuando mandamos la nueva contraseña pasan 2 cosas
-        - Se modifica la contraseña en el usuario
-        - Se modifica el recoveryToken como ya usado, para que no se pueda volver a utilizar
+-/users
+    -/me -> Mi información de usuario
+    -/:id -> un usuario en especifico
+    -/:id/add-follow -> 
 
+-/follows
+    -/:id
 
-
+-/followers
+    -/:id
